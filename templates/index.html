@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My WebApp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}">
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="{{ url_for('index') }}">MyWebApp</a></h1>
+        <nav>
+            <a href="#">Channels list</a>
+        </nav>
+    </header>
+
+    {% block main %}
+    <main id="index">
+        <div class="container">
+            <h1>WELCOME TO MY WEB APPLICATION</h1>
+            <p>This web app is about messaging via channels, 
+                that were created by other users.<br>
+                Have a greate time.  
+            </p>
+        </div>
+    </main>
+    {% endblock %}
+
+    <footer>
+        <p>Created by: SOME GUY</p>
+    </footer>
+</body>
+</html>
